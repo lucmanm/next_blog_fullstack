@@ -9,7 +9,7 @@ export async function main() {
     }
 }
 
-export const GET =async (req:Request, res: NextResponse) => {
+export const GET = async (req:Request, res: NextResponse) => {
     try {
         await main();
         const posts = await prisma.post.findMany();
